@@ -1,0 +1,306 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TISFD — Inequality &amp; Human Rights in Finance | Fair Finance Pakistan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1A2A3A;
+    --ink:#15202B;
+    --paper:#FBFAF8;
+    --stone:#E8E3DA;
+    --stone-line:#D8D1C4;
+    --brass:#B08D4F;
+    --muted:#5C6670;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+
+  /* ---------- HERO BANNER (single image) ---------- */
+  .hero{
+    position:relative;
+    min-height:440px;
+    display:flex;align-items:flex-end;
+    background:
+      linear-gradient(180deg, rgba(21,32,43,.62) 0%, rgba(26,42,58,.88) 100%),
+      url('https://cdn.prod.website-files.com/672d08b2d88b396e31d7fdc0/684fe0177a2be3bd2cfe3cb2_high-angle-view-of-commuters-passengers-and-busine-2025-01-08-03-03-45-utc.jpg') center 30%/cover no-repeat;
+    color:#fff;
+  }
+  .hero-inner{max-width:1200px;margin:0 auto;width:100%;padding:0 40px 54px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+     color:#fff;margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:34px;height:1.5px;background:#fff;}
+  .hero h1{
+   font-weight:500;
+   font-family: var(--font-serif);
+    font-size:63.6px;line-height:1.06;
+    letter-spacing:-.01em;max-width:30ch;
+  }
+  .hero .standfirst{
+    margin-top:20px;max-width:60ch;
+    font-size:1.05rem;color:rgba(255,255,255,.82);font-weight:400;
+  }
+
+  /* ---------- LEDGER BAND (banner columns) ---------- */
+  .ledger{
+    background: #d9ead8;;color:#fff;
+    border-top:3px solid green;
+  }
+  .ledger-grid{
+    max-width:1200px;margin:0 auto;
+    display:grid;
+    grid-template-columns:1.1fr 1fr 1fr 1fr 1fr;
+  }
+  .col{
+    padding:30px 26px 34px;
+    border-left:1px solid rgba(255,255,255,.12);
+  }
+  .col:first-child{border-left:none;}
+  .col .tag{
+    font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
+    color:#000000;font-weight:700;margin-bottom:16px;
+  }
+  .col h3{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:1.05rem;line-height:1.25;margin-bottom:6px;color:#000000;
+  }
+  .col p{font-size:.82rem;color:#000;line-height:1.5;}
+  .collab-row{margin-bottom:16px;}
+  .collab-row:last-child{margin-bottom:0;}
+  .collab-row .name{font-weight:600;font-size:.9rem;color:#000000;}
+  .collab-row .role{font-size:.75rem;color:#000;}
+
+  /* ---------- BODY ---------- */
+  .body-grid{
+    display:grid;grid-template-columns:1fr 320px;gap:56px;
+    padding:64px 0 40px;align-items:start;
+  }
+  .prose > p{font-size:16.8px;margin-bottom:22px;color:#222b31;}
+  /* .prose .lead-first::first-letter{
+    font-family:'Fraunces',serif;float:left;
+    font-size:3.4rem;line-height:.8;padding:6px 12px 0 0;
+    color:var(--navy);font-weight:600;
+  } */
+  .prose a{color:#000;text-decoration:none;border-bottom:1px solid black;}
+ 
+  .prose h2{
+    font-family:'Fraunces',serif;font-weight:600;font-size: 28px;
+    color:var(--navy);margin:40px 0 16px;padding-top:26px;
+    border-top:1px solid var(--stone-line);
+  }
+  .evidence{
+    list-style:none;margin:6px 0 24px;
+    border-left:2px solid green;
+  }
+  .evidence li{
+    position:relative;padding:7px 0 7px 22px;
+    font-size:1rem;color:#333d44;
+  }
+  .evidence li::before{
+    content:"";position:absolute;left:-5px;top:16px;
+    width:8px;height:8px;border-radius:50%;background:green;
+    box-shadow:0 0 0 3px var(--paper);
+  }
+
+  /* ---------- COVER / DOWNLOAD CARD (top-right) ---------- */
+  .aside{position:sticky;top:28px;}
+  .cover-card{
+    background:#fff;border:1px solid var(--stone-line);
+    border-radius:4px;overflow:hidden;
+    box-shadow:0 18px 40px -28px rgba(21,32,43,.5);
+  }
+  .cover-card .cover{
+  aspect-ratio:1/1.3;
+  background:url('images/TISFD_logo_blue_Logo.jpg') center center/cover no-repeat;
+  position:relative;
+  display:block;
+  padding:0;
+  min-height:420px;
+  background-size: contain;
+}
+  .cover-card .cover .mark{
+    font-family:'Fraunces',serif;color:#fff;font-size:1.35rem;
+    font-weight:500;line-height:1.15;letter-spacing:.01em;
+  }
+  .cover-card .cover .mark small{
+    display:block;font-family:'Inter';font-weight:600;
+    font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--brass);margin-bottom:10px;
+  }
+  .download-bar{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:12px;padding:16px 18px;background:#fff;
+  }
+  .download-bar .meta{font-size:.72rem;color:var(--muted);line-height:1.35;}
+  .download-bar .meta strong{display:block;color:var(--navy);font-size:.82rem;}
+  .dl-btn{
+    flex-shrink:0;display:inline-flex;align-items:center;gap:8px;
+    background:var(--navy);color:#fff;text-decoration:none;
+    font-weight:600;font-size:.82rem;padding:11px 16px;border-radius:3px;
+    transition:background .18s ease;
+  }
+  .dl-btn:hover{background:var(--brass);}
+  .dl-btn svg{width:15px;height:15px;}
+
+  /* ---------- FOOTER DOWNLOAD STRIP ---------- */
+  .foot-strip{
+    margin-top:18px;border-top:1px solid var(--stone-line);
+  }
+  .foot-strip-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:24px;padding:30px 0 64px;flex-wrap:wrap;
+  }
+  .foot-strip .lead{
+    font-family:'Fraunces',serif;font-size:1.2rem;color:var(--navy);
+  }
+  .foot-strip .src{font-size:.74rem;color:var(--muted);max-width:62ch;margin-top:6px;}
+  .dl-btn-lg{
+    display:inline-flex;align-items:center;gap:10px;
+    background:#ffffff;color:#000000;text-decoration:none;border: 1px solid black;
+    font-weight:600;font-size:.95rem;padding:15px 28px;border-radius:3px;
+    transition:transform .18s ease, background .18s ease;
+  }
+  .dl-btn-lg:hover{background:#000000;transform:translateY(-2px); color: #fff;}
+  .dl-btn-lg svg{width:18px;height:18px;}
+
+  @media(max-width:900px){
+    .ledger-grid{grid-template-columns:1fr 1fr;}
+    .col{border-left:1px solid rgba(255,255,255,.12);border-top:1px solid rgba(255,255,255,.12);}
+    .col:nth-child(odd){border-left:none;}
+    .body-grid{grid-template-columns:1fr;gap:36px;}
+    .aside{position:static;max-width:340px;}
+  }
+  @media(max-width:560px){
+    .wrap,.hero-inner{padding-left:22px;padding-right:22px;}
+    .ledger-grid{grid-template-columns:1fr;}
+    .col{border-left:none;}
+    .col:first-child{border-top:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Inequality &amp; Human Rights in Finance</span>
+    <h1>The Taskforce on Inequality and Social-related Financial Disclosures</h1>
+    <p class="standfirst">A global, multi-stakeholder initiative to make inequality and people-related risks visible in corporate and financial reporting.</p>
+  </div>
+</header>
+
+<!-- LEDGER BAND: collaborators + highlights as banner columns -->
+<section class="ledger" aria-label="Collaborators and key highlights">
+  <div class="ledger-grid">
+    <div class="col">
+      <div class="tag">Collaborators</div>
+      <div class="collab-row"><span class="name">TISFD Secretariat</span><span class="role">Convening Body</span></div>
+      <div class="collab-row"><span class="name">Founding Partners</span><span class="role">20+ public, social &amp; private bodies</span></div>
+      <div class="collab-row"><span class="name">100+ Organisations</span><span class="role">Taskforce Alliance</span></div>
+    </div>
+    <div class="col">
+      <div class="tag">Launched Sep 2024</div>
+      <h3>A global taskforce</h3>
+      <p>Backed by 100+ business, finance, labour, and civil-society bodies.</p>
+    </div>
+    <div class="col">
+      <div class="tag">People in Scope</div>
+      <h3>Disclosing IDROs</h3>
+      <p>Inequality and people-related impacts, risks, dependencies, and opportunities.</p>
+    </div>
+    <div class="col">
+      <div class="tag">TCFD / TNFD lineage</div>
+      <h3>Four-pillar model</h3>
+      <p>Mirrors the climate and nature disclosure architecture for interoperability.</p>
+    </div>
+    <div class="col">
+      <div class="tag">Beta to final</div>
+      <h3>Regionally grounded</h3>
+      <p>Draft framework (v0.1) in consultation 2025–26; final due 2027. FFP holds an Asia-Pacific seat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BODY -->
+<div class="wrap">
+  <div class="body-grid">
+    <main class="prose">
+      <p class="lead-first">As inequality is increasingly recognised as a system-level risk capable of undermining the stability of economies, societies, and the institutions that serve them, the financial sector confronts a conspicuous gap: while climate and nature now command established disclosure architectures, the social dimension of sustainability has lacked an equivalent, comparable language. The Taskforce on Inequality and Social-related Financial Disclosures (TISFD) was launched in September 2024 to close that gap — a global, multi-stakeholder initiative convened by founding partners including UNDP, UNESCO, the WBCSD, and the ILO, with the backing of more than 100 organisations across business, finance, labour, and civil society. Its premise is unambiguous: markets depend on people and society to function, and the impacts businesses and investors have on people’s rights and well-being are not peripheral ethical concerns but material drivers of risk, return, and resilience.</p>
+
+      <p><a href="https://www.youtube.com/watch?v=PbPpre0p8uo" target="_blank" rel="noopener">TISFD’s purpose</a> is to develop a global framework enabling businesses and financial institutions to identify, assess, and disclose their people-related impacts, dependencies, risks, and opportunities (IDROs) — spanning human rights, labour rights, well-being, and inequality across an organisation’s own workforce, value-chain workers, consumers, and communities. Deliberately modelled on the Taskforce on Climate-related (TCFD) and Nature-related (TNFD) Financial Disclosures, it adopts the same four-pillar structure of governance, strategy, risk management, and metrics and targets, and is designed to interoperate with the ISSB, GRI, and European Sustainability Reporting Standards — part of a deliberate effort to harmonise global standards and reduce the fragmentation that has long made social reporting inconsistent and incomparable.</p>
+
+      <p>The Taskforce is steered by its advisory network of leaders from financial institutions, business, civil society, and labour — senior members from ING, CalPERS, AXA, and Schneider Electric sit alongside Oxfam, Fair Finance Asia, UNEP FI, IndustriALL Global Union, and the ILO — and is supported by a Secretariat and a network of Knowledge Partners that grounds the framework in research. The Evidence Hub brings together research from diverse sources and resource types to deepen understanding across five core areas:</p>
+
+      <ul class="evidence">
+        <li>Current state of people and inequality</li>
+        <li>How business and finance impact people and inequalities</li>
+        <li>The business case for addressing these impacts</li>
+        <li>System-level risks that arise from inequality</li>
+        <li>Linkages between people, nature, and climate</li>
+      </ul>
+
+      <p>Its first beta framework (Version 0.1), comprising conceptual foundations and draft disclosure recommendations, was released for public consultation in 2025–26, with a final framework anticipated in 2027. <a href="https://www.tisfd.org/frameworks/tisfd-framework-beta-version-0-1" target="_blank" rel="noopener">Explore the framework here.</a> To ensure the framework is globally consistent yet locally relevant, TISFD has established four Regional Councils — for the Americas, Asia-Pacific, Europe &amp; UK, and the Middle East &amp; Africa — each convening 20–25 financial institutions, corporates, civil-society groups, and labour organisations to co-create deliverables and embed regional perspectives.</p>
+
+      <h2>Why it matters for Pakistan</h2>
+
+      <p>Civil society was embedded at TISFD’s very foundation: Oxfam and its regional programme, Fair Finance Asia, are among the Taskforce’s Founding Partners, ensuring that people-related risks were defined with, not merely for, the communities they affect. It is through this same lineage — the Oxfam-coordinated Fair Finance International network and its Fair Finance Asia arm — that Fair Finance Pakistan takes its place in the Taskforce’s work.</p>
+
+      <p>Fair Finance Pakistan is a <a href="https://www.tisfd.org/about/advisory-network" target="_blank" rel="noopener">member</a> of the TISFD Asia-Pacific Regional Council, and joins the TISFD Advisory Network to ensure the Framework is technically robust, grounded in practical experience, and reflective of the needs of stakeholders across geographies. It contributes to the co-creation of the Taskforce’s deliverables, ensuring that the realities of an emerging, climate-vulnerable economy — marked by deep inequalities and a large informal workforce — inform a framework too often shaped by advanced-economy assumptions. Through this seat, FFP helps translate a global disclosure ambition into a regionally grounded instrument, while bringing TISFD’s structured vocabulary for social risk into Pakistan’s own financial-sector dialogue — complementing the country’s green-finance architecture with a long-overdue social lens.</p>
+    </main>
+
+    <!-- COVER + DOWNLOAD (top right) -->
+    <aside class="aside">
+      <div class="cover-card">
+        <a class="cover" href="https://www.tisfd.org/" target="_blank" rel="noopener"></a>
+        <div class="download-bar">
+          <div class="meta"><strong>TISFD</strong>Official site &amp; framework</div>
+          <a class="dl-btn" href="https://www.tisfd.org/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Open
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER DOWNLOAD STRIP -->
+  <div class="foot-strip">
+    <div class="foot-strip-inner">
+      <div>
+        <div class="lead">Read the framework in full</div>
+        <p class="src">Source: TISFD — Framework (Beta v0.1), Conceptual Foundations, and Regional Council materials (2024–2026).</p>
+      </div>
+      <a class="dl-btn-lg" href="https://www.tisfd.org/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download / Visit TISFD
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

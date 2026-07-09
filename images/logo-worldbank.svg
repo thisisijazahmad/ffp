@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<rect width="120" height="120" fill="#eef2f0"/>
+<circle cx="60" cy="60" r="56" fill="#ffffff" stroke="#1c8a6a" stroke-width="3"/>
+<text x="60" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#132126">World Bank</text>
+<text x="60" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#617176">logo placeholder</text>
+</svg>

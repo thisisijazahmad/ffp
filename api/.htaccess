@@ -1,0 +1,20 @@
+# Pretty routes for the AQ API (Apache / Laragon).
+# Falls back gracefully to the plain .php files if rewrite is unavailable.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /api/
+
+    # /api/cities/{id}/latest   and   /api/cities/{id}/history
+    RewriteRule ^cities/([a-z0-9\-]+)/latest/?$   latest.php?id=$1   [L,QSA]
+    RewriteRule ^cities/([a-z0-9\-]+)/history/?$  history.php?id=$1  [L,QSA]
+
+    # /api/cities   and   /api/ranking
+    RewriteRule ^cities/?$    cities.php   [L,QSA]
+    RewriteRule ^ranking/?$   ranking.php  [L,QSA]
+</IfModule>
+
+# Protect the raw store + config from direct web access.
+<FilesMatch "\.(tmp)$">
+    Require all denied
+</FilesMatch>

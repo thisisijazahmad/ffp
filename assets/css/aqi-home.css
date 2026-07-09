@@ -1,0 +1,65 @@
+/* ============================================================
+   Homepage live air-quality widgets — Fair Finance Pakistan
+   ============================================================ */
+
+/* ---------- Hero summary block ---------- */
+.aq-hero-summary {
+    display: inline-flex; align-items: center; gap: 0.9rem;
+    margin-top: 1.6rem; padding: 0.75rem 1.15rem;
+    background: rgba(17, 30, 35, 0.86); border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 14px; text-decoration: none; color: #fff; backdrop-filter: blur(3px);
+    box-shadow: 0 10px 26px rgba(15, 28, 33, 0.28);
+    transition: background 0.18s, transform 0.18s; max-width: 100%;
+}
+.aq-hero-summary:hover { background: rgba(17, 30, 35, 0.94); transform: translateY(-2px); color: #fff; }
+.aq-hero-badge {
+    flex: 0 0 auto; min-width: 54px; text-align: center; font-family: var(--font-serif, serif);
+    font-size: 1.55rem; font-weight: 700; color: #fff; border-radius: 10px; padding: 0.35rem 0.5rem; line-height: 1;
+}
+.aq-hero-text { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.aq-hero-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: #9fb0ad; }
+.aq-hero-cta { color: var(--color-green-accent-light, #6fd3b3); }
+.aq-hero-city { font-weight: 600; font-size: 1.02rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.aq-hero-cta { flex: 0 0 auto; font-weight: 700; font-size: 0.85rem; white-space: nowrap; }
+@media (max-width: 560px) { .aq-hero-cta { display: none; } }
+
+/* ---------- Banner ticker ---------- */
+.aq-ticker {
+    position: absolute; left: 0; right: 0; bottom: 0; z-index: 3;
+    display: flex; align-items: stretch;
+    background: rgba(15, 28, 33, 0.72); backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+.aq-ticker-tag {
+    flex: 0 0 auto; display: flex; align-items: center; gap: 0.4rem;
+    background: var(--color-green-accent, #1c8a6a); color: #fff;
+    font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0 1rem; white-space: nowrap;
+}
+.aq-ticker-viewport { position: relative; flex: 1; overflow: hidden; }
+.aq-ticker-track {
+    display: inline-flex; align-items: center; white-space: nowrap; padding: 0.55rem 0;
+    animation: aq-marquee 60s linear infinite; will-change: transform;
+}
+.aq-ticker-viewport:hover .aq-ticker-track { animation-play-state: paused; }
+@keyframes aq-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.aq-ticker-item {
+    display: inline-flex; align-items: center; gap: 0.45rem; padding: 0 1rem;
+    text-decoration: none; color: #eef3f2; font-size: 0.86rem;
+}
+.aq-ticker-item:hover { color: #fff; }
+.aq-ticker-dot { width: 9px; height: 9px; border-radius: 50%; }
+.aq-ticker-city { font-weight: 600; }
+.aq-ticker-aqi { font-weight: 700; }
+.aq-ticker-dom { font-size: 0.74rem; color: #aab6b3; }
+.aq-ticker-sep { color: rgba(255, 255, 255, 0.35); }
+
+@media (prefers-reduced-motion: reduce) {
+    .aq-ticker-track { animation: none; }
+    .aq-ticker-viewport { overflow-x: auto; }
+}
+@media (max-width: 560px) {
+    .aq-ticker-tag { font-size: 0.64rem; padding: 0 0.6rem; }
+    .aq-ticker-item { font-size: 0.8rem; padding: 0 0.7rem; }
+}

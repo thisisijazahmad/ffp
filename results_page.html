@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Policy Assessment 2023 &mdash; Infographic Gallery | Fair Finance Pakistan</title>
+    <meta name="description" content="Visual results from Fair Finance Pakistan's first policy assessment of five Pakistani commercial banks &mdash; ten infographic cards summarising scores across the FFGI thematic areas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+
+    <style>
+        /* PAGE-LOCAL STYLES (Infographic Gallery) */
+
+        .gallery-section{
+            padding:70px 20px;
+            background:#fff;
+        }
+
+        .gallery-section .container{
+            max-width:1200px;
+        }
+
+        .back-link{
+            display:inline-block;
+            margin-bottom:25px;
+            color:#0b7a33;
+            font-weight:700;
+            font-size:15px;
+            text-decoration:none;
+        }
+
+        .back-link:hover{
+            text-decoration:underline;
+        }
+
+        .gallery-heading{
+            font-size:42px;
+            font-weight:800;
+            color:black;
+            text-align:left;
+            margin-bottom:20px;
+            line-height:1.3;
+        }
+
+        .gallery-intro{
+            text-align:left;
+            font-size:16px;
+            color:#444;
+            max-width:780px;
+            /* margin:0 auto 50px; */
+        }
+
+        .image-grid{
+            display:flex;
+            flex-direction:column;
+            gap:35px;
+        }
+        .single-image-row{
+    display:flex;
+    justify-content:center;
+    margin-bottom:35px;
+}
+
+.single-image-row img{
+    width:720px;
+    max-width:100%;
+    height: 500px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    display:block;
+}
+.single-image-row img:hover{
+            transform:translateY(-4px);
+            box-shadow:0 20px 45px rgba(0,0,0,0.14);
+        }
+
+        .image-row{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            flex-wrap:wrap;
+        }
+
+        .image-row a{
+            display:block;
+            line-height:0;
+        }
+
+        .image-row img{
+            width:520px;
+            max-width:100%;
+            border-radius:18px;
+            box-shadow:0 15px 35px rgba(0,0,0,0.08);
+            display:block;
+            transition:transform .3s ease, box-shadow .3s ease;
+            cursor:pointer;
+        }
+
+        .image-row img:hover{
+            transform:translateY(-4px);
+            box-shadow:0 20px 45px rgba(0,0,0,0.14);
+        }
+
+        /* LIGHTBOX (separate full-screen view on click) */
+        .lightbox{
+            position:fixed;
+            inset:0;
+            background:rgba(10,30,15,0.92);
+            display:none;
+            align-items:center;
+            justify-content:center;
+            z-index:9999;
+            padding:30px;
+        }
+
+        .lightbox.is-open{
+            display:flex;
+        }
+
+        .lightbox img{
+            max-width:95%;
+            max-height:90vh;
+            border-radius:14px;
+            box-shadow:0 25px 60px rgba(0,0,0,0.45);
+        }
+
+        .lightbox-close{
+            position:absolute;
+            top:22px;
+            right:30px;
+            background:transparent;
+            border:none;
+            color:#fff;
+            font-size:38px;
+            line-height:1;
+            cursor:pointer;
+            font-weight:300;
+        }
+
+        @media(max-width:768px){
+            .gallery-heading{ font-size:30px; margin-bottom:15px; }
+            .image-row{ gap:20px; }
+            .image-row img{ width:100%; }
+            .gallery-section{ padding:50px 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="global-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Fair Finance Pakistan" class="ffp-wordmark">
+                </a>
+
+                <div class="navbar-nav navbar-nav-center">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="air-quality-map.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clean Air Finance</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="air-quality-map.html">Clean Air &amp; Financial Risk</a></li>
+                            <li><a class="dropdown-item" href="air-quality-map.html">Pakistan Clean Air Finance Framework</a></li>
+                            <li><a class="dropdown-item" href="collaboration.html">Institutional Engagement and Convening</a></li>
+                            <li><a class="dropdown-item" href="about.html#reports">Reports &amp; Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="responsible_banking.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Banking Policy &amp; ESG</a>
+                        <ul class="dropdown-menu">
+                            <!-- <li><a class="dropdown-item" href="responsible_banking.html">Responsible Banking &amp; ESG Governance</a></li> -->
+                            <li><a class="dropdown-item" href="policy_assesment_2023.html">Policy Assessment 2023</a></li>
+                            <li><a class="dropdown-item" href="policy_assesment_2023.html">Policy Assessment 2024</a></li>
+                            <li><a class="dropdown-item" href="esrm-manual.html">Policies, Regulations &amp; Standards</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="carbon-market.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Industrial Transition</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="carbon-market.html">Sectoral Emissions &amp; Transition Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="collaboration.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collaboration</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="collaboration.html">Collaboration</a></li>
+                            <li><a class="dropdown-item" href="collaborative_initiative.html">Collaborative Initiatives</a></li>
+                            <li><a class="dropdown-item" href="roundtables.html">Roundtables and Multi-Company Opportunities</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="tisdf.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inequality &amp; Human Rights in Finance</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tisdf.html">TISFD</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="about.html#our-work">Our Work</a></li>
+                            <li><a class="dropdown-item" href="about.html#reports">Publications</a></li>
+                            <li><a class="dropdown-item" href="news-events.html">News &amp; Insights</a></li>
+                            <li><a class="dropdown-item" href="contact_form.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="navbar-nav navbar-nav-right">
+                    <button class="nav-link search-toggle" type="button" aria-label="Open search" aria-expanded="false" aria-controls="headerSearchPanel">
+                        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                            <path d="M10.5 3a7.5 7.5 0 1 0 4.73 13.33l4.72 4.72 1.06-1.06-4.72-4.72A7.5 7.5 0 0 0 10.5 3Zm0 1.5a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z"></path>
+                        </svg>
+                    </button>
+                    <form id="headerSearchPanel" class="header-search-panel" action="/search" method="get" role="search">
+                        <label for="headerSearchInput" class="visually-hidden">Search the website</label>
+                        <input id="headerSearchInput" name="q" type="search" placeholder="Search..." />
+                        <button type="submit" aria-label="Submit search">
+                            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                                <path d="M4 12h13.17l-3.59-3.59L15 7l6 6-6 6-1.42-1.41L17.17 13H4z"></path>
+                            </svg>
+                        </button>
+                    </form>
+                    <a class="nav-link language-link" href="/ur">EN</a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+
+        <div class="collapse navbar-collapse mobile-nav" id="mobileNav">
+            <div class="container">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="air-quality-map.html">Clean Air Finance</a>
+                <a class="nav-link" href="responsible_banking.html">Banking Policy &amp; ESG</a>
+                <a class="nav-link" href="carbon-market.html">Industrial Transition</a>
+                <a class="nav-link" href="collaboration.html">Collaboration</a>
+                <a class="nav-link" href="tisdf.html">Inequality &amp; Human Rights in Finance</a>
+                <a class="nav-link" href="about.html">About Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-section">
+            <div class="container">
+
+                <!-- BACK LINK -->
+                <a href="policy_assesment_2023.html" class="back-link">&larr; Back to Policy Assessment 2023</a>
+
+                <h1 class="gallery-heading">
+                    Fair Finance Pakistan&rsquo;s First Policy Assessment of 5 Pakistani Commercial Banks
+                </h1>
+
+                <p class="gallery-intro">
+                    Infographic results from the 2023 benchmarking of Habib Bank Limited, Allied Bank, National Bank of Pakistan, Meezan Bank, and Muslim Commercial Bank across 10 thematic areas. Click any card to open a larger view.
+                </p>
+
+                <!-- 10 INFOGRAPHIC CARDS — 5 ROWS OF 2 -->
+                <div class="image-grid">
+
+                    <div class="single-image-row">
+            <a href="#" data-full="images/image11.jpg"><img src="images/image11.jpg" alt="Infographic 1"></a>
+        </div>
+
+                    <div class="image-row">
+                        <a href="#" data-full="images/image1.webp"><img src="images/image1.webp" alt="Infographic 1"></a>
+                        <a href="#" data-full="images/image2.png"><img src="images/image2.png" alt="Infographic 2"></a>
+                    </div>
+
+                    <div class="image-row">
+                        <a href="#" data-full="images/image3.webp"><img src="images/image3.webp" alt="Infographic 3"></a>
+                        <a href="#" data-full="images/image4.png"><img src="images/image4.png" alt="Infographic 4"></a>
+                    </div>
+
+                    <div class="image-row">
+                        <a href="#" data-full="images/image5.webp"><img src="images/image5.webp" alt="Infographic 5"></a>
+                        <a href="#" data-full="images/image6.webp"><img src="images/image6.webp" alt="Infographic 6"></a>
+                    </div>
+
+                    <div class="image-row">
+                        <a href="#" data-full="images/image7.webp"><img src="images/image7.webp" alt="Infographic 7"></a>
+                        <a href="#" data-full="images/image8.webp"><img src="images/image8.webp" alt="Infographic 8"></a>
+                    </div>
+
+                    <div class="image-row">
+                        <a href="#" data-full="images/image9.png"><img src="images/image9.png" alt="Infographic 9"></a>
+                        <a href="#" data-full="images/image10.webp"><img src="images/image10.webp" alt="Infographic 10"></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- LIGHTBOX (full-screen view on click) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Infographic full view">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+        <img id="lightboxImage" src="" alt="">
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row footer-grid">
+                <div class="col-md-4 footer-column footer-brand-column">
+                    <img src="images/FFP-NEW-white.png" alt="Fair Finance Pakistan" class="footer-logo">
+                    <p>Fair Finance Pakistan works at the intersection of finance, policy, clean air, industrial transition, and social accountability to shift capital toward a more sustainable and inclusive economy.</p>
+                </div>
+                <div class="col-md-2 footer-column">
+                    <h5>Our Work</h5>
+                    <ul class="footer-links">
+                        <li><a href="air-quality-map.html">Clean Air Finance</a></li>
+                        <li><a href="responsible_banking.html">Banking Policy and ESG</a></li>
+                        <li><a href="carbon-market.html">Industrial Transition</a></li>
+                        <li><a href="collaboration.html">Collaboration</a></li>
+                        <li><a href="tisdf.html">Inequality and Human Rights in Finance</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 footer-column">
+                    <h5>Explore</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#our-work">Our Work</a></li>
+                        <li><a href="about.html#reports">Publications</a></li>
+                        <li><a href="news-events.html">News &amp; Insights</a></li>
+                        <li><a href="contact_form.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 footer-column">
+                    <h5>Featured Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="air-quality-map.html">Pakistan Clean Air Finance Framework</a></li>
+                        <li><a href="collaborative_initiative.html">Collaborative Initiatives</a></li>
+                        <li><a href="policy_assesment_2023.html">Policy Assessment 2023</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 footer-column">
+                    <h5>Contact</h5>
+                    <ul class="footer-links">
+                        <li><a href="contact_form.html">Get in touch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-note">
+                <p>Fair Finance Pakistan is part of the <a href="https://fairfinanceinternational.org" target="_blank" rel="noopener noreferrer">Fair Finance International</a> network.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            var toggle = document.querySelector(".search-toggle");
+            var panel = document.getElementById("headerSearchPanel");
+            var input = document.getElementById("headerSearchInput");
+            if (!toggle || !panel || !input) return;
+
+            function closePanel() {
+                panel.classList.remove("is-open");
+                toggle.setAttribute("aria-expanded", "false");
+            }
+
+            toggle.addEventListener("click", function (e) {
+                e.preventDefault();
+                var willOpen = !panel.classList.contains("is-open");
+                panel.classList.toggle("is-open", willOpen);
+                toggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+                if (willOpen) input.focus();
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!panel.contains(e.target) && !toggle.contains(e.target)) {
+                    closePanel();
+                }
+            });
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") closePanel();
+            });
+        })();
+
+        (function () {
+            var grid = document.querySelector('.image-grid');
+            var box = document.getElementById('lightbox');
+            var img = document.getElementById('lightboxImage');
+            var closeBtn = document.getElementById('lightboxClose');
+            if (!grid || !box || !img || !closeBtn) return;
+
+            function open(src, alt) {
+                img.src = src;
+                img.alt = alt || '';
+                box.classList.add('is-open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function close() {
+                box.classList.remove('is-open');
+                img.src = '';
+                document.body.style.overflow = '';
+            }
+
+            grid.addEventListener('click', function (e) {
+                var link = e.target.closest('a[data-full]');
+                if (!link) return;
+                e.preventDefault();
+                var inner = link.querySelector('img');
+                open(link.getAttribute('data-full'), inner ? inner.alt : '');
+            });
+
+            closeBtn.addEventListener('click', close);
+            box.addEventListener('click', function (e) {
+                if (e.target === box) close();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') close();
+            });
+        })();
+    </script>
+</body>
+</html>

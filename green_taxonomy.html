@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Collaboration | Fair Finance Pakistan</title>
+    <meta name="description" content="Fair Finance Pakistan collaboration page covering overview, approach, experts, impacts, and contact pathways.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="icon" href="images/logo.png">
+
+
+    <style>
+       .green-banking-tab{ padding:70px 0; background:#fff; } 
+       .tab-layout{ display:grid;
+         grid-template-columns:220px 1fr 320px;
+          gap:50px; }
+           /* LEFT */ 
+           .org-item{ text-align:center; margin-bottom:35px; } 
+           .org-logo{
+             width:120px;
+             height:120px;
+              margin:auto;
+               border-radius:50%; 
+               overflow:hidden;
+                border:2px solid #e5e5e5; 
+            } 
+            .org-logo img{ 
+                width:100%; 
+                height:100%;
+                 object-fit:contain;
+                 }
+                  .org-item h6{ 
+                    margin-top:12px; 
+                    font-size:14px;
+                     line-height:1.6;
+                     } 
+                     /* CENTER */
+                      .content-area h1{ 
+                        font-size:42px;
+         font-weight:700; 
+         color:#000;
+          margin-bottom:20px;
+         }
+          .content-area h2{
+             font-size:28px;
+              font-weight:700;
+               color:#000; 
+               margin-top:50px;
+                margin-bottom:20px;
+             } .lead-text{ 
+                font-size:20px;
+                 line-height:1.8;
+                  margin-bottom:30px;
+                 } 
+                 .content-area p{
+                     line-height:1.9; 
+                     margin-bottom:20px;
+                      color:#333;
+                     } 
+                     blockquote{ 
+                        background:#f8ead1;
+         border-left:5px solid #2f9e44;
+          padding:25px;
+           margin:35px 0;
+            font-style:italic;
+         }
+          .requirements-list{
+             padding-left:20px;
+             } 
+             .requirements-list li{ 
+                margin-bottom:15px; 
+                line-height:1.8; } 
+                .green-box{ background:#d9ead8;
+                     border-left:5px solid #2f9e44;
+         padding:30px; 
+         margin-top:40px;
+         }
+          /* RIGHT */ 
+          .sidebar-sticky{ 
+            position:sticky;
+             top:40px; 
+            }
+             .cover-image{ 
+                width:100%;
+                 max-width:260px;
+                  display:block; 
+                  margin:auto;
+                   box-shadow:0 10px 25px rgba(0,0,0,.10);
+                 }
+                  .download-btn-white{
+                     width:100%; max-width:260px;
+                      margin:15px auto 35px; display:flex;
+                       justify-content:center;
+                        align-items:center;
+                         padding:12px 20px;
+                          border:1px solid #000; 
+                          color:#000; background:#fff;
+                           text-decoration:none;
+                            font-weight:600; transition:.3s;
+                         }
+                          .download-btn-white:hover
+                          {
+         background:#000;
+          color:#fff;
+         } 
+         .key-highlights{
+             max-width:260px; 
+             margin:auto;
+             } 
+             .key-highlights h3{
+                 color:#000;
+         font-size:24px;
+          margin-bottom:20px;
+           font-weight:700;
+         }
+          .key-highlights ul{
+             padding-left:18px;
+             } 
+             .key-highlights li{
+                 margin-bottom:18px;
+         line-height:1.8;
+         }
+          /* BOTTOM */ 
+          .bottom-download{
+         margin-top:50px; }
+          .bottom-download a
+          {
+             display:inline-flex;
+              justify-content:center;
+               align-items:center;
+                padding:12px 25px;
+     border:1px solid #000;
+      background:#fff;
+       color:#000;
+        text-decoration:none;
+         font-weight:600;
+         }
+          .bottom-download a:hover{
+             background:#000; 
+             color:#fff; 
+            }
+             .query-box{
+                 margin-top:30px;
+                 } 
+                 .query-box a{
+                     color:#2f9e44; 
+                    } 
+                    /* MOBILE */
+        @media(max-width:1200px)
+        { 
+            .tab-layout{
+                 grid-template-columns:1fr;
+         } 
+         .org-sidebar{ 
+            display:flex;
+             flex-wrap:wrap;
+              justify-content:center;
+               gap:25px;
+                order:3;
+             }
+              .content-area{
+                 order:1;
+                 }
+                  .right-sidebar{ order:2; }
+         .sidebar-sticky{
+             position:relative; top:auto;
+             }
+              .cover-image,
+               .key-highlights,
+                .download-btn-white{
+             max-width:350px;
+             } 
+             .content-area h1{
+         font-size:34px; 
+        }
+     }
+       /* ===== Responsible Banking & ESG — feedback revisions ===== */
+       .org-sidebar-title{ font-family:'Source Sans 3',sans-serif; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:#132126; font-weight:700; text-align:center; margin-bottom:34px; }
+       .org-item{ margin-bottom:48px; }
+       .org-item h6{ margin-top:16px; line-height:1.7; letter-spacing:.01em; color:#132126; }
+       .key-highlights{ margin-top:42px; padding-top:30px; border-top:1px solid #e5e5e5; }
+       .dl-ico{ margin-left:8px; vertical-align:-2px; }
+    </style>
+</head>
+<body>
+    <header class="global-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Fair Finance Pakistan" class="ffp-wordmark">
+                </a>
+
+                <div class="navbar-nav navbar-nav-center">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="air-quality-map.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Clean Air Finance</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="air-quality-map.html">Clean Air &amp; Financial Risk</a></li>
+                            <li><a class="dropdown-item" href="air-quality-map.html">Pakistan Clean Air Finance Framework</a></li>
+                            <li><a class="dropdown-item" href="collaboration.html">Institutional Engagement and Convening</a></li>
+                            <li><a class="dropdown-item" href="about.html#reports">Reports &amp; Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="responsible_banking.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Banking Policy &amp; ESG</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="responsible_banking.html">Responsible Banking &amp; ESG Governance</a></li>
+                            <li><a class="dropdown-item" href="policy_assesment_2023.html">Policy Assessment 2023</a></li>
+                            <li><a class="dropdown-item" href="policy_assesment_2023.html">Policy Assessment 2024</a></li>
+                            <li><a class="dropdown-item" href="esrm-manual.html">Policies, Regulations &amp; Standards</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="carbon-market.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Industrial Transition</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="carbon-market.html">Sectoral Emissions &amp; Transition Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="collaboration.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Collaboration</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="collaboration.html">Collaboration</a></li>
+                            <li><a class="dropdown-item" href="collaborative_initiative.html">Collaborative Initiatives</a></li>
+                            <li><a class="dropdown-item" href="collaboration.html#roundtables">Roundtables and Multi-Company Opportunities</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="tisdf.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inequality &amp; Human Rights in Finance</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="tisdf.html">TISFD</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="about.html#our-work">Our Work</a></li>
+                            <li><a class="dropdown-item" href="about.html#reports">Publications</a></li>
+                            <li><a class="dropdown-item" href="news-events.html">News &amp; Insights</a></li>
+                            <li><a class="dropdown-item" href="contact_form.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="navbar-nav navbar-nav-right">
+                    <button class="nav-link search-toggle" type="button" aria-label="Open search" aria-expanded="false" aria-controls="headerSearchPanel">
+                        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                            <path d="M10.5 3a7.5 7.5 0 1 0 4.73 13.33l4.72 4.72 1.06-1.06-4.72-4.72A7.5 7.5 0 0 0 10.5 3Zm0 1.5a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z"></path>
+                        </svg>
+                    </button>
+                    <form id="headerSearchPanel" class="header-search-panel" action="/search" method="get" role="search">
+                        <label for="headerSearchInput" class="visually-hidden">Search the website</label>
+                        <input id="headerSearchInput" name="q" type="search" placeholder="Search..." />
+                        <button type="submit" aria-label="Submit search">
+                            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                                <path d="M4 12h13.17l-3.59-3.59L15 7l6 6-6 6-1.42-1.41L17.17 13H4z"></path>
+                            </svg>
+                        </button>
+                    </form>
+                    <a class="nav-link language-link" href="/ur">EN</a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+
+        <div class="collapse navbar-collapse mobile-nav" id="mobileNav">
+            <div class="container">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="collaboration.html">Collaboration</a>
+                <a class="nav-link" href="collaboration.html#overview">Overview</a>
+                <a class="nav-link" href="collaborative_initiative.html">Collaborative Initiatives</a>
+                <a class="nav-link" href="collaboration.html#roundtables">Roundtables</a>
+                <a class="nav-link" href="collaboration.html#experts">Our Experts</a>
+                <a class="nav-link" href="contact_form.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="collab-hero" id="top">
+            <div class="collab-hero-media"></div>
+            <div class="collab-hero-overlay"></div>
+            <div class="container collab-hero-content">
+                <p class="collab-kicker">Responsible Banking &amp; ESG</p>
+                <h1>Regulatory Compass: Mapping Pakistan&rsquo;s Sustainable Finance Framework</h1>
+            </div>
+        </section>
+
+        <section class="collab-anchor-nav-wrap collab-tab">
+            <div class="container">
+                <nav class="collab-anchor-nav" aria-label="Collaboration sections">
+                    <a href="responsible_banking.html">GBGs</a>
+                    <a href="esrm-manual.html">ESRM Manual</a>
+                    <a href="green_taxonomy.html" class="is-active">Pakistan Green Taxonomy</a>
+                    <a href="carbon-market.html"> Carbon Market Guidelines</a>
+                   
+                </nav>
+            </div>
+        </section>
+
+
+        <!-- ========================= GREEN BANKING TAB CONTENT ========================= --> 
+         <section class="green-banking-tab">
+             <div class="tab-layout"> 
+                <!-- LEFT SIDEBAR --> 
+                 <aside class="org-sidebar">
+     <p class="org-sidebar-title">Collaborators</p>
+     <div class="org-item">
+         <div class="org-logo">
+     <img src="images/SBP.png" alt="State Bank of Pakistan">
+    </div>
+     <h6>State Bank of Pakistan</h6>
+     </div>
+      <div class="org-item">
+        <div class="org-logo">
+     <img src="images/ministry-climate-change" alt="Ministry of Climate Change & Environmental Coordination">
+     </div>
+      <h6>Ministry of Climate Change &amp; EC</h6>
+     </div>
+      <div class="org-item">
+         <div class="org-logo">
+             <img src="images/world-bank-logo_0.jpg" alt="World Bank Group">
+             </div>
+              <h6>World Bank Group</h6>
+             </div>
+
+             <div class="org-item">
+         <div class="org-logo">
+             <img src="images/fcdo" alt="U.K. Foreign, Commonwealth and Development Office">
+             </div>
+              <h6>U.K. Foreign, Commonwealth and Development Office</h6>
+             </div>
+
+              <div class="org-item">
+         <div class="org-logo">
+             <img src="images/ambire-global" alt="Ambire Global">
+             </div>
+              <h6>Ambire Global</h6>
+             </div>
+
+            
+             </aside>
+              <!-- MAIN CONTENT -->
+                <div class="content-area">
+     <h1>Pakistan Green Taxonomy (2025)</h1>
+     <p class="lead-text"> 
+      A science-based classification system establishing a single, consistent definition of “green” for
+Pakistan’s financial sector.</p> 
+        <p>
+           Confronting an estimated financing gap of US$348 billion to meet its 2030 climate commitments
+(National Climate Finance Strategy 2024), Pakistan faces an acute imperative to channel capital toward
+sustainable, climate-aligned activity. Yet in the absence of a common definition of what qualifies as
+“green,” financial institutions have lacked the shared reference needed to scale credible climate finance
+and to guard against greenwashing. To close this gap, the Government of Pakistan — led by the State
+Bank of Pakistan (SBP) in concert with the Ministry of Climate Change &amp; Environmental Coordination —
+notified the Pakistan Green Taxonomy (PGT) in 2025, the country’s first science-based classification
+system for green economic activities and investments.
+             </p>
+              
+  <p> 
+   Conceived as a phased instrument, the 2025 edition identifies economic activities that contribute
+substantially to climate change. For each eligible activity it sets technical screening criteria for
+substantial contribution, and embeds the principles of Do No Significant Harm (DNSH) and Minimum
+Social Safeguards — mirroring the architecture of the EU Taxonomy while adapting priority sectors such
+as agriculture and tourism to national circumstances. Conceived in phases, the 2025 edition
+concentrates on substantial contribution to climate objectives, with later editions expected to broaden
+coverage as methodologies mature. The Taxonomy is organised around seven environmental objectives:
+    
+
+        <ul class="requirements-list"> 
+    <li>Climate change mitigation</li>
+     <li>Climate change adaptation</li>
+      <li>Sustainable use and protection of water resources</li>
+       <li>Protection of healthy ecosystems and biodiversity</li>
+       <li>Pollution prevention and control</li>
+       <li>Promotion of a circular economy</li>
+       <li>Sustainable land management</li>
+        
+         </ul> 
+         <h2>Partners in development</h2>
+         <p>
+       The PGT was developed with technical assistance from the World Bank Group, funded by the United
+Kingdom’s Foreign, Commonwealth &amp; Development Office (FCDO), with research and stakeholder
+engagement led by Ambire Global, and following the methodology of the <a href="https://documents1.worldbank.org/curated/en/953011593410423487/pdf/Developing-a-National-
+Green-Taxonomy-A-World-Bank-Guide.pdf" style="color: #111; text-decoration: underline;">World Bank’s “Developing a
+National Green Taxonomy.</a>” The Ministry of Climate Change &amp; Environmental
+Coordination co-led the initiative alongside the SBP, supported by a multi-stakeholder Working Group.
+This builds on the broader institutional scaffolding of Pakistan’s green-banking agenda, in which the
+International Finance Corporation (IFC) has been a sustained partner since the SBP joined its Sustainable
+Banking and Finance Network in 2015.</p>
+
+         <h2>What the Taxonomy asks of financial institutions</h2>
+          <ul class="requirements-list"> 
+    <li>Use the PGT as the reference framework when formulating and updating their green banking
+policies, as directed by the SBP.</li>
+     <li>Apply the technical screening criteria to determine whether an activity makes a substantial
+contribution to an environmental objective.</li>
+      <li>Verify that financed activities Do No Significant Harm (DNSH) to other environmental objectives.</li>
+       <li>Ensure compliance with Minimum Social Safeguards covering labour rights, community impacts,
+and human-rights considerations.</li>
+        <li>Adhere to monitoring, reporting, and verification (MRV) standards and international integrity
+benchmarks for credit quality.</li>
+         <li>Enhance transparency and disclosure of the green share of lending and investment portfolios,
+supporting climate-risk reporting.</li>
+         </ul> 
+         <h2>Status</h2>
+
+         <p>
+          The PGT is a guidance framework rather than a binding regulation: the taxonomy document itself states
+that it does not create, confer, or impose legal rights or obligations. Through <a href="https://www.sbp.org.pk/smefd/circulars/2025/C6.htm" style="color: #111; text-decoration: underline;">SH&amp;SFD Circular No. 06 of
+2025 </a>  the SBP advised all banks and
+DFIs to use the PGT as a reference for their green banking policies. The SBP has set out a phased,
+facilitative implementation strategy — committing to &quot;hand-holding&quot; so institutions can adopt the
+framework smoothly — built on three sequential steps:
+         </p>
+         <ul>
+            <li>Capacity building across the banking sector;</li>
+            <li>Portfolio mapping against the green / amber / red traffic-light system, drawing on the ASEAN
+and EU taxonomies;</li>
+<li>Sectoral pilots to address data availability, due-diligence practice, and proxy indicators.</li>
+         </ul>
+         
+<div class="green-box">
+     <h2>A view from civil society</h2>
+      <p> In its formal feedback on the draft, Fair Finance Pakistan welcomed the Taxonomy’s structure but cautioned
+that the two-week public-consultation window (4–18 February 2025) was too brief to allow comprehensive
+input from civil society and the wider business community. It urged that the criteria be strengthened with
+sector-specific definitions, measurable benchmarks, and clearer monitoring and enforcement mechanisms;
+that emerging sectors such as energy storage, green hydrogen, and carbon capture be better represented;
+
+and that fossil-fuel activities be explicitly excluded from “green” classification, with defined transition
+pathways aligned to the Paris Agreement.
+      </p> 
+      
+     </div>
+      <div class="bottom-download">
+ <a href="https://www.mocc.gov.pk/SiteImage/Misc/files/2025%20Pakistan%20Green%20Taxonomy_Aug%2014.pdf" target="_blank">
+     Download <svg class="dl-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3 1.4 1.4-5.7 5.7-5.7-5.7 1.4-1.4 3.3 3.3V4a1 1 0 0 1 1-1Zm-7 14h14v2H5v-2Z"/></svg></a>
+    </div>
+ </div>
+  <!-- RIGHT SIDEBAR --> 
+   <aside class="right-sidebar">
+     <div class="sidebar-sticky">
+         <img src="images/green-taxonomy" alt="Pakistan Green Taxonomy 2025 cover" class="cover-image">
+ <a href="https://www.mocc.gov.pk/SiteImage/Misc/files/2025%20Pakistan%20Green%20Taxonomy_Aug%2014.pdf" target="_blank" class="download-btn-white">
+     Download <svg class="dl-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3 1.4 1.4-5.7 5.7-5.7-5.7 1.4-1.4 3.3 3.3V4a1 1 0 0 1 1-1Zm-7 14h14v2H5v-2Z"/></svg>
+    </a>
+     <div class="key-highlights">
+         <h3>Key Highlights</h3>
+          <ul>
+             <li>
+                 <strong>Approved Dec. 2024.</strong>Pakistan’s first carbon-trading policy, unveiled at COP29, Baku.
+                 </li>
+                  <li> <strong>Article 6 Architecture.</strong> Governs voluntary and compliance markets via ITMOs and corresponding adjustments.
+                </li>
+                 <li> <strong>12% Adjustment Fee.</strong>Levied on net credit revenue, shared with provinces and the Climate Change Fund.
+                </li>
+                 <li> <strong>Trading Ceiling.</strong>Article 6 trades capped at ≈50% (280.5 MtCO₂e) of the conditional NDC target. </li> 
+                </ul>
+             </div>
+             </div>
+             </aside>
+             </div>
+             </section>
+
+       
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row footer-grid">
+                <div class="col-md-4 footer-column footer-brand-column">
+                    <img src="images/FFP-NEW-white.png" alt="Fair Finance Pakistan" class="footer-logo">
+                    <p>Fair Finance Pakistan works at the intersection of finance, policy, clean air, industrial transition, and social accountability to shift capital toward a more sustainable and inclusive economy.</p>
+                </div>
+                <div class="col-md-2 footer-column">
+                    <h5>Our Work</h5>
+                    <ul class="footer-links">
+                        <li><a href="air-quality-map.html">Clean Air Finance</a></li>
+                        <li><a href="responsible_banking.html">Banking Policy and ESG</a></li>
+                        <li><a href="carbon-market.html">Industrial Transition</a></li>
+                        <li><a href="collaboration.html">Collaboration</a></li>
+                        <li><a href="tisdf.html">Inequality and Human Rights in Finance</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 footer-column">
+                    <h5>Explore</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#our-work">Our Work</a></li>
+                        <li><a href="about.html#reports">Publications</a></li>
+                        <li><a href="news-events.html">News &amp; Insights</a></li>
+                        <li><a href="contact_form.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 footer-column">
+                    <h5>Featured Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="air-quality-map.html">Pakistan Clean Air Finance Framework</a></li>
+                        <li><a href="collaborative_initiative.html">Collaborative Initiatives</a></li>
+                        <li><a href="collaboration.html#roundtables">Roundtables</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="col-md-2 footer-column">
+                    <h5>Contact</h5>
+                    <ul class="footer-links">
+                        <li><a href="contact_form.html">Get in touch</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-note">
+                <p>Fair Finance Pakistan is part of the <a href="https://fairfinanceinternational.org" target="_blank" rel="noopener noreferrer">Fair Finance International</a> network.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            var toggle = document.querySelector(".search-toggle");
+            var panel = document.getElementById("headerSearchPanel");
+            var input = document.getElementById("headerSearchInput");
+            if (!toggle || !panel || !input) return;
+
+            function closePanel() {
+                panel.classList.remove("is-open");
+                toggle.setAttribute("aria-expanded", "false");
+            }
+
+            toggle.addEventListener("click", function (e) {
+                e.preventDefault();
+                var willOpen = !panel.classList.contains("is-open");
+                panel.classList.toggle("is-open", willOpen);
+                toggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+                if (willOpen) input.focus();
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!panel.contains(e.target) && !toggle.contains(e.target)) {
+                    closePanel();
+                }
+            });
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") closePanel();
+            });
+        })();
+
+        (function () {
+            var modal = document.getElementById("expertModal");
+            var cards = document.querySelectorAll(".collab-expert-card");
+            if (!modal || !cards.length) return;
+
+            var image = document.getElementById("expertModalImage");
+            var name = document.getElementById("expertModalName");
+            var role = document.getElementById("expertModalRole");
+            var location = document.getElementById("expertModalLocation");
+            var bio = document.getElementById("expertModalBio");
+            var bio2 = document.getElementById("expertModalBio2");
+            var links = document.getElementById("expertModalLinks");
+            var closeButtons = modal.querySelectorAll("[data-close-modal]");
+
+            function socialLink(url, label, icon) {
+                if (!url) return "";
+                return '<a href=\"' + url + '\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"' + label + '\">' + icon + "</a>";
+            }
+
+            function openModal(card) {
+                image.src = card.dataset.expertImage || "";
+                image.alt = card.dataset.expertName || "";
+                name.textContent = card.dataset.expertName || "";
+                role.textContent = card.dataset.expertRole || "";
+                location.textContent = card.dataset.expertLocation || "";
+                bio.textContent = card.dataset.expertBio || "";
+                bio2.textContent = card.dataset.expertBio2 || "";
+                links.innerHTML =
+                    socialLink(
+                        card.dataset.expertLinkedin,
+                        (card.dataset.expertName || "Expert") + " on LinkedIn",
+                        '<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" d=\"M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.67H6.26V17H8.34M7.3 9.8A1.2 1.2 0 1 0 7.3 7.4A1.2 1.2 0 0 0 7.3 9.8M17.74 17V13.5C17.74 11.63 16.74 10.53 15.11 10.53C13.79 10.53 13.2 11.26 12.87 11.77V10.67H10.79C10.82 11.4 10.79 17 10.79 17H12.87V13.47C12.87 13.28 12.88 13.08 12.94 12.95C13.09 12.56 13.43 12.16 14.01 12.16C14.77 12.16 15.07 12.74 15.07 13.6V17H17.74Z\"/></svg>'
+                    ) +
+                    socialLink(
+                        card.dataset.expertX,
+                        (card.dataset.expertName || "Expert") + " on X",
+                        '<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" d=\"M18.9 2H21L14.12 9.87L22 22H15.83L10.99 14.6L4.48 22H2.37L9.73 13.64L2.17 2H8.5L12.88 8.82L18.9 2M18.16 20.74H19.33L7.87 3.19H6.61L18.16 20.74Z\"/></svg>'
+                    );
+
+                modal.hidden = false;
+                document.body.classList.add("modal-open");
+            }
+
+            function closeModal() {
+                modal.hidden = true;
+                document.body.classList.remove("modal-open");
+            }
+
+            cards.forEach(function (card) {
+                card.addEventListener("click", function (e) {
+                    if (e.target.closest(".collab-expert-links")) return;
+                    openModal(card);
+                });
+                card.addEventListener("keydown", function (e) {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        openModal(card);
+                    }
+                });
+            });
+
+            closeButtons.forEach(function (button) {
+                button.addEventListener("click", closeModal);
+            });
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape" && !modal.hidden) closeModal();
+            });
+        })();
+    </script>
+</body>
+</html>

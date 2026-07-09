@@ -1,0 +1,125 @@
+/* ============================================================
+   Air-Quality map interface — Fair Finance Pakistan
+   ============================================================ */
+
+.aqim-hero {
+    background: linear-gradient(135deg, var(--color-charcoal) 0%, var(--color-charcoal-light) 100%);
+    color: var(--color-white);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    text-align: center;
+}
+.aqim-hero h1 { color: var(--color-white); font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+.aqim-hero p { color: var(--color-grey-light); max-width: 720px; margin: 0 auto; }
+
+.aqim-live-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(28,138,106,0.18); border: 1px solid var(--color-green-accent);
+    color: var(--color-green-accent-light); font-weight: 700; font-size: 0.78rem;
+    letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.9rem;
+    border-radius: 999px; margin-bottom: 0.9rem;
+}
+.aqim-live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-green-accent-light); animation: aqi-pulse 1.8s infinite; }
+
+.aqim-page { background: var(--color-off-white); padding: var(--spacing-md) 0 var(--spacing-xl); }
+
+.aqim-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: var(--spacing-md);
+    align-items: start;
+}
+@media (max-width: 980px) { .aqim-layout { grid-template-columns: 1fr; } }
+
+.aqim-card {
+    background: var(--color-white); border: 1px solid var(--color-grey-light);
+    border-radius: 18px; box-shadow: 0 10px 26px rgba(19,33,38,0.06); overflow: hidden;
+}
+
+/* ---------- Map ---------- */
+.aqim-map { height: 560px; width: 100%; border-radius: 18px; }
+@media (max-width: 600px) { .aqim-map { height: 420px; } }
+
+.aqim-marker {
+    display: grid; place-items: center;
+    border-radius: 50%; color: #fff; font-weight: 700;
+    border: 2px solid rgba(255,255,255,0.9);
+    box-shadow: 0 2px 8px rgba(19,33,38,0.35);
+    font-family: var(--font-sans);
+}
+
+.leaflet-popup-content-wrapper { border-radius: 12px; }
+.aqim-pop { font-family: var(--font-sans); }
+.aqim-pop b { font-family: var(--font-serif); font-size: 1.05rem; }
+.aqim-pop .aqim-pop-aqi { font-weight: 700; }
+.aqim-pop button {
+    margin-top: 0.5rem; border: none; background: var(--color-green-accent);
+    color: #fff; border-radius: 8px; padding: 0.4rem 0.8rem; font-weight: 600; cursor: pointer;
+}
+
+/* ---------- Ranking ---------- */
+.aqim-side-title {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.1rem; border-bottom: 1px solid var(--color-grey-light);
+}
+.aqim-side-title h3 { margin: 0; font-size: 1.15rem; }
+.aqim-side-title span { font-size: 0.75rem; color: var(--color-grey-dark); font-weight: 600; }
+
+.aqim-ranking { list-style: none; margin: 0; padding: 0.4rem; max-height: 470px; overflow-y: auto; }
+.aqim-rank-item {
+    display: flex; align-items: center; gap: 0.7rem;
+    padding: 0.55rem 0.6rem; border-radius: 10px; cursor: pointer;
+}
+.aqim-rank-item:hover, .aqim-rank-item.is-active { background: var(--color-off-white); }
+.aqim-rank-no { width: 22px; text-align: center; font-weight: 700; color: var(--color-grey-dark); font-size: 0.85rem; }
+.aqim-rank-name { flex: 1; font-weight: 600; }
+.aqim-rank-name small { display: block; font-weight: 400; color: var(--color-grey-dark); font-size: 0.75rem; }
+.aqim-rank-badge {
+    min-width: 46px; text-align: center; color: #fff; font-weight: 700;
+    border-radius: 8px; padding: 0.25rem 0.4rem; font-size: 0.9rem;
+}
+
+/* ---------- Legend ---------- */
+.aqim-legend {
+    display: flex; flex-wrap: wrap; gap: 0; margin-top: var(--spacing-md);
+    border-radius: 12px; overflow: hidden; border: 1px solid var(--color-grey-light);
+}
+.aqim-legend-item { flex: 1 1 0; min-width: 110px; padding: 0.6rem 0.7rem; color: #fff; text-align: center; }
+.aqim-legend-range { font-weight: 700; font-size: 0.9rem; }
+.aqim-legend-label { font-size: 0.74rem; opacity: 0.95; }
+
+/* ---------- Detail panel ---------- */
+.aqim-detail { margin-top: var(--spacing-md); }
+.aqim-detail-head { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; justify-content: space-between; padding: 1.1rem 1.3rem 0; }
+.aqim-detail-head h3 { margin: 0; font-size: 1.5rem; }
+.aqim-detail-aqi { display: flex; align-items: center; gap: 0.7rem; }
+.aqim-detail-num { font-family: var(--font-serif); font-size: 2.4rem; font-weight: 600; line-height: 1; }
+.aqim-detail-band { color: #fff; font-weight: 700; padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.9rem; }
+
+.aqim-detail-body { padding: 1.1rem 1.3rem 1.4rem; display: grid; grid-template-columns: 1fr 1.3fr; gap: 1.4rem; }
+@media (max-width: 760px) { .aqim-detail-body { grid-template-columns: 1fr; } }
+
+.aqim-poll-table { width: 100%; border-collapse: collapse; }
+.aqim-poll-table th { text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-grey-dark); padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--color-grey-light); }
+.aqim-poll-table td { padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--color-grey-light); font-size: 0.95rem; }
+.aqim-poll-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 0.45rem; vertical-align: middle; }
+
+.aqim-chart-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; }
+.aqim-range-group { display: inline-flex; border: 1px solid var(--color-grey-light); border-radius: 8px; overflow: hidden; }
+.aqim-range-group button { border: none; background: #fff; color: var(--color-grey-dark); font-size: 0.8rem; font-weight: 700; padding: 0.35rem 0.7rem; cursor: pointer; }
+.aqim-range-group button.is-active { background: var(--color-charcoal); color: #fff; }
+.aqim-chart-wrap { position: relative; height: 240px; }
+.aqim-chart-empty {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 1.2rem; font-size: 0.85rem; line-height: 1.5;
+    color: var(--color-grey-dark); background: var(--color-off-white);
+    border: 1px dashed var(--color-grey-light); border-radius: 12px;
+}
+
+.aqim-source-line { font-size: 0.82rem; color: var(--color-grey-dark); margin-top: 0.8rem; }
+.aqim-source-line b { color: var(--color-charcoal); }
+.aqim-stale { color: #a11; font-weight: 700; }
+
+.aqim-note { text-align: center; font-size: 0.82rem; color: var(--color-grey-dark); margin-top: var(--spacing-md); }
+.aqim-note a { color: var(--color-green-accent); font-weight: 600; }
+
+.aqim-empty { padding: 2rem; text-align: center; color: var(--color-grey-dark); }
