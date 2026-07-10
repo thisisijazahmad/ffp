@@ -29,7 +29,7 @@ window.NEWS_ITEMS = [
         imageAlt: "Clean Air Finance virtual dialogue at London Climate Action Week 2026",
         excerpt: "Fair Finance Pakistan and the UC Davis Air Quality Research Center hosted a virtual dialogue exploring how clean air goals can be embedded into sustainable finance frameworks, as a side event of London Climate Action Week 2026.",
         body: 
-             
+             "<h1>LCAW2026 - Clean Air Finance: Integrating Public Health, Industrial Transition & Sustainable Finance </h1>"+
               "<p><em>London Climate Action Week 2026</em></p>" +
               "<p>Fair Finance Pakistan, in collaboration with the University of California, Davis, Air Quality Research Center, hosted a virtual dialogue — Clean Air Finance: Integrating Public Health,Industrial Transition and Sustainable Finance in Emerging Economies — on 27 June 2026 as a side event of London Climate Action Week 2026. Drawing on the Pakistan Clean Air Finance Framework (PCAFF) and the ASIC Pakistan Mitigation Series 2025, the session brought together sustainable finance, development finance institutions, policy, academia, industry, and civil society to explore how clean air goals can be embedded into sustainable finance frameworks, with a focus on industrial transition and public health in emerging economies.</p>" +
               "<p>The discussion was chaired by Professor Anthony Wexler, Director of the UC Davis Air Quality Research Center, and featured distinguished speakers including Glynda Bathan-Baterina, Deputy Executive Director, Clean Air Asia; Professor Elizabeth Kennedy, Professor of Law &amp; Social Responsibility, Loyola University Maryland; and Asim Jaffry, Country Program Lead at Fair Finance Pakistan.</p>" +
@@ -59,7 +59,9 @@ window.NEWS_ITEMS = [
         heroImage: "infographic/speakers2a.jpg",
         imageAlt: "Global Policy and Finance Dialogue in London for LCAW 2026",
         excerpt: "Fair Finance Pakistan and the UC Davis Air Quality Research Center convened a Global Policy and Finance Dialogue in London and online, examining how equity and public health intersect with financial stability and the low-carbon transition.",
-        body: "<p><em>Global Policy and Finance Dialogue · London Climate Action Week 2026</em></p>" +
+        body: "<h1>Global Policy & Finance Dialogue: — Air Pollution, Inequality and Financial Stability: Emerging Insights from the Pakistan Clean Air Finance Framework (PCAFF)</h1>"+
+        
+             "<p><em>Global Policy and Finance Dialogue · London Climate Action Week 2026</em></p>" +
              
               "<p>On 28 June 2026, Fair Finance Pakistan with the UC Davis Air Quality Research Center convened a Global Policy and Finance Dialogue — Air Pollution, Inequality and Financial Stability: Emerging Insights from the Pakistan Clean Air Finance Framework (PCAFF) — held both online via Zoom and in person in London — during the London Climate Action Week 2026. The dialogue brought together sustainable finance, development finance institutions, policy, academia, industry, and civil society to examine how considerations of equity and public health intersect with financial stability and the low-carbon transition.</p>" +
               

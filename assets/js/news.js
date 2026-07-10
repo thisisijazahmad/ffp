@@ -218,7 +218,7 @@
             : '<div class="ne-hero-img is-placeholder"><span>' + esc(item.type) + " · Fair Finance Pakistan</span></div>";
 
         var partners = item.partners.length
-            ? '<div class="ne-aside-block"><h4>Partners &amp; co-hosts</h4><ul class="ne-partners">' +
+            ? '<div class="ne-aside-block"><h4></h4><ul class="ne-partners">' +
               item.partners.map(function (p) {
                   // An image path (e.g. infographic/speakers2a.jpg) renders as an image, not text.
                   if (/\.(jpe?g|png|webp|gif|svg)$/i.test(p)) {
