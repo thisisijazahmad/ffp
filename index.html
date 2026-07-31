@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/aqi-home.css" rel="stylesheet">
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -55,6 +56,12 @@
                         <a class="nav-link dropdown-toggle" href="/inequality-human-rights" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inequality & Human Rights in Finance</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="tisdf.html">TISFD</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle aq-nav-link" href="air-quality-map.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Air Watch Pakistan</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="air-quality-map.html">Pakistan Air Quality Index</a></li>
                         </ul>
                     </div>
                     <div class="nav-item dropdown">
@@ -109,6 +116,7 @@
                 <a class="nav-link" href="/industrial-transition">Industrial Transition</a>
                 <a class="nav-link" href="collaboration.html">Collaboration</a>
                 <a class="nav-link" href="/inequality-human-rights">Inequality & Human Rights in Finance</a>
+                <a class="nav-link" href="air-quality-map.html">Air Watch Pakistan</a>
                 <a class="nav-link" href="about.html">About Us</a>
                 <a class="nav-link" href="/our-work">Our Work</a>
                 <a class="nav-link" href="/publications">Publications</a>
@@ -150,6 +158,16 @@
                 institutional accountability, and systems-level transition pathways across Pakistan's
                 banking and industrial sectors.
             </p>
+
+            <!-- Live AQ summary block -->
+            <a class="aq-hero-summary" href="air-quality-map.html" style="display:none;">
+                <span class="aq-hero-badge">--</span>
+                <span class="aq-hero-text">
+                    <span class="aq-hero-label">Air Watch Pakistan · most polluted now</span>
+                    <span class="aq-hero-city">Loading live air quality…</span>
+                </span>
+                <span class="aq-hero-cta">View the live map →</span>
+            </a>
         </div>
     </div>
 
@@ -159,7 +177,7 @@
         <div class="hero-slide">
 
             <div class="hero-background-image"
-                 style="background-image:url('images/map-image.jpeg'); filter:blur(2px); transform:scale(1.05);">
+                 style="background-image:url('images/aqi_map.png'); filter:blur(2px); transform:scale(1.05);">
             </div>
 
             <div class="hero-overlay"></div>
@@ -175,23 +193,43 @@
                     <p class="hero-subtext">
                         Real-time air quality for 20 major cities — check live pollutants and AQI ranking.
                     </p>
+
+                    <div class="hero-buttons">
+                        <a href="air-quality-map.html" class="btn btn-primary">Live AQI Data</a>
+                    </div>
+
+                    <!-- Live AQ summary block -->
+                    <a class="aq-hero-summary" href="air-quality-map.html" style="display:none;">
+                        <span class="aq-hero-badge">--</span>
+                        <span class="aq-hero-text">
+                            <span class="aq-hero-label">Air Watch Pakistan · most polluted now</span>
+                            <span class="aq-hero-city">Loading live air quality…</span>
+                        </span>
+                        <span class="aq-hero-cta">View the live map →</span>
+                    </a>
                 </div>
             </div>
 
         </div>
 
     </div>
+
+    <!-- Live AQI ticker overlaid on the banner -->
+    <div class="aq-ticker" id="aqTicker" aria-label="Live air quality ticker">
+        <span class="aq-ticker-tag">● LIVE AQI</span>
+        <div class="aq-ticker-viewport"><div class="aq-ticker-track" id="aqTickerTrack"></div></div>
+    </div>
 </section>
-         <section class="flagship-initiative flagship-alt">
+         <!-- <section class="flagship-initiative flagship-alt">
             <div class="container">
                 <h2 class="flagship-title">Pakistan's Air Quality, City by City</h2>
                 <p class="flagship-description">Open-source air-quality data from 20 cities, shown on a live map with rankings, trends, and health advice — updated hourly.</p>
                 <div class="flagship-buttons">
-                    <a href="/collaboration/c-initiative" class="btn btn-outline">Live Air Quality Data </a>
+                    <a href="air-quality-map.html" class="btn btn-outline">Live Air Quality Data </a>
                    
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="flagship-initiative">
             <div class="container">
@@ -304,20 +342,46 @@
    <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    const slides = document.querySelectorAll(".hero-slide");
-    let current = 0;
-
-    function showSlide(index){
-        slides.forEach(slide => slide.classList.remove("active"));
-        slides[index].classList.add("active");
+    // Publish the sticky header's real height so the hero can size itself to the
+    // remaining fold instead of guessing (see --nav-h in style.css).
+    const nav = document.querySelector(".global-nav");
+    if (nav) {
+        const syncNavHeight = () =>
+            document.documentElement.style.setProperty("--nav-h", nav.offsetHeight + "px");
+        syncNavHeight();
+        window.addEventListener("resize", syncNavHeight);
     }
 
-    showSlide(current);
+    const slides = document.querySelectorAll(".hero-slide");
+    if (slides.length < 2) return;
 
-    setInterval(function(){
+    const SLIDE_MS = 900;   // must match the transition duration in style.css
+    let current = 0;
+
+    slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+
+    function advance(){
+        const outgoing = slides[current];
         current = (current + 1) % slides.length;
-        showSlide(current);
-    }, 4000);
+        const incoming = slides[current];
+
+        // Outgoing exits to the left, incoming rides in from the right.
+        outgoing.classList.remove("active");
+        outgoing.classList.add("leaving");
+        incoming.classList.remove("leaving");
+        incoming.classList.add("active");
+
+        // Once it is off-screen, snap the outgoing slide back to the right-hand
+        // parking spot with the transition suppressed, so it never streaks across.
+        setTimeout(function(){
+            outgoing.classList.add("no-anim");
+            outgoing.classList.remove("leaving");
+            void outgoing.offsetWidth;           // force reflow before re-enabling
+            outgoing.classList.remove("no-anim");
+        }, SLIDE_MS);
+    }
+
+    setInterval(advance, 6000);
 
 });
 </script>
@@ -360,5 +424,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })();
     </script>
+    <script src="assets/js/aqi-home.js"></script>
 </body>
 </html>

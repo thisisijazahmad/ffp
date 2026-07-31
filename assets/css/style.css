@@ -251,30 +251,73 @@ a:hover {
 
 
 
+/* The banner fills the fold *below* the sticky header, not a whole 100vh on top
+   of it — otherwise the bottom of the hero (and the AQI ticker) sits off-screen.
+   --nav-h is refreshed from the real header height by the script in index.html. */
 .hero-section{
     position:relative;
     overflow:hidden;
-    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-height:calc(100vh - var(--nav-h, 87px));
+    min-height:calc(100svh - var(--nav-h, 87px));
 }
 
+/* Slides are stacked in a single grid cell rather than absolutely positioned, so
+   the tallest slide still sets the banner height and nothing can be clipped. */
 .hero-slider{
     position:relative;
     width:100%;
-    height:100%;
+    flex:1;
+    display:grid;
+    grid-template-columns:1fr;
 }
 
+/* Slides queue off-screen to the right, ride in to centre, and exit left.
+   .hero-section already clips the overflow, so the parked slides stay hidden. */
 .hero-slide{
-    position:absolute;
-    inset:0;
+    grid-area:1 / 1;
+    position:relative;
+    display:flex;
+    align-items:center;
     opacity:0;
-    visibility:hidden;
-    transition:opacity .8s ease;
+    z-index:1;
+    pointer-events:none;
+    transform:translateX(100%);
+    transition:transform .9s cubic-bezier(.65,0,.35,1), opacity .9s ease;
+}
+
+.hero-slide > .container{
+    width:100%;
+    height:auto;
 }
 
 .hero-slide.active{
     opacity:1;
-    visibility:visible;
     z-index:2;
+    pointer-events:auto;
+    transform:translateX(0);
+}
+
+/* Set by the slider while the outgoing slide animates off to the left. */
+.hero-slide.leaving{
+    opacity:0;
+    z-index:1;
+    transform:translateX(-100%);
+}
+
+/* Used for the instant, invisible reset back to the right-hand parking spot. */
+.hero-slide.no-anim{
+    transition:none;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .hero-slide,
+    .hero-slide.leaving{
+        transform:none;
+        transition:opacity .4s ease;
+    }
 }
 
 .hero-background-image{
@@ -299,13 +342,16 @@ a:hover {
     height:100%;
 }
 
+/* Height comes from the content itself — the slide centres it. No percentage
+   heights here, or the padding pushes the top of the headline under the navbar.
+   The bottom padding keeps the content clear of the AQI ticker. */
 .hero-content{
-    height:500px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:flex-start;
     max-width:980px;
+    padding:2.5rem 0 5.5rem;
 }
 
 .hero-kicker,
@@ -325,6 +371,13 @@ a:hover {
 .hero-section .container {
     position: relative;
     z-index: 3;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.75rem;
+    margin-top:1.6rem;
 }
 
 /* .hero-content {
@@ -841,7 +894,6 @@ text-align: left;
         height: 40px;
     }
 
-    .hero-section,
     .flagship-initiative,
     .collaboration-section,
     .experts-section,
@@ -850,8 +902,8 @@ text-align: left;
         padding: var(--spacing-lg) 0;
     }
 
-    .hero-section {
-        min-height: auto;
+    .hero-content {
+        padding: 2rem 0 5rem;
     }
 
     .flagship-buttons,

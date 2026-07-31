@@ -52,15 +52,22 @@
     }
 
     function buildHeroSummary(list) {
-        var box = document.getElementById("aqHeroSummary");
-        if (!box) return;
+        // A page may carry more than one summary block (e.g. one per hero slide).
+        var boxes = document.querySelectorAll(".aq-hero-summary");
+        if (!boxes.length) return;
         var top = list[0];
-        document.getElementById("aqHeroBadge").textContent = top.aqi == null ? "--" : top.aqi;
-        document.getElementById("aqHeroBadge").style.background = colorFor(top.aqi);
-        document.getElementById("aqHeroCity").textContent =
-            top.name + ", " + top.province + " — " + (top.band || "");
-        box.href = detailUrl(top.id);
-        box.style.display = "inline-flex";
+        var label = top.name + ", " + top.province + " — " + (top.band || "");
+        Array.prototype.forEach.call(boxes, function (box) {
+            var badge = box.querySelector(".aq-hero-badge");
+            var city = box.querySelector(".aq-hero-city");
+            if (badge) {
+                badge.textContent = top.aqi == null ? "--" : top.aqi;
+                badge.style.background = colorFor(top.aqi);
+            }
+            if (city) city.textContent = label;
+            box.href = detailUrl(top.id);
+            box.style.display = "inline-flex";
+        });
     }
 
     function prettyParam(p) {
