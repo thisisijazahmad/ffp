@@ -22,7 +22,7 @@ return [
     // OpenAQ v3 free key (register at https://explore.openaq.org). Passed as
     // the X-API-Key header. Leave blank to run on Open-Meteo only.
     // You can also set it via the OPENAQ_API_KEY environment variable.
-    'openaq_api_key' => getenv('OPENAQ_API_KEY') ?: '6beffb3fedfc7a7e83cc100a53c7bf3588153dcd119f14267c8c3f3792f44720',
+    'openaq_api_key' => getenv('OPENAQ_API_KEY') ?: '',
     'openaq_radius_m' => 25000, // search radius around the city centroid
 
     // Freshness / staleness policy.

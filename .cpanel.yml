@@ -1,0 +1,21 @@
+---
+deployment:
+  tasks:
+    # cPanel clones the repo to ~/repositories/ffp and runs these tasks when you
+    # press "Deploy HEAD Commit". Change DEPLOYPATH if your cPanel user differs.
+    - export DEPLOYPATH=/home/ulx50efk37hj/public_html
+    - /bin/mkdir -p $DEPLOYPATH
+
+    # Pages and static assets
+    - /bin/cp -R assets $DEPLOYPATH/
+    - /bin/cp -R images $DEPLOYPATH/
+    - /bin/cp -R infographic $DEPLOYPATH/
+    - /bin/cp *.html $DEPLOYPATH/
+
+    # API code. "cp -R" merges into the existing folder and never deletes, so the
+    # server's own api/config.php and api/contact_config.php survive a deploy as
+    # long as those two files stay out of the repo (see .gitignore).
+    - /bin/cp -R api $DEPLOYPATH/
+
+    # data/ is deliberately NOT copied — ingest.php writes live AQI readings and
+    # contact submissions there on the server. Copying would roll them back.

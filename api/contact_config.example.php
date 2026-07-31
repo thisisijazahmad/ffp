@@ -22,7 +22,7 @@ return [
         'port' => 587,
         'secure' => 'tls',                          // STARTTLS on 587
         'username' => 'fairfinancepakistan@gmail.com',
-        'password' => getenv('FFP_SMTP_PASS') ?: 'cqhyuzunbyiauoqx',  // <-- Gmail App Password here
+        'password' => getenv('FFP_SMTP_PASS') ?: '',  // <-- Gmail App Password here
     ],
 
     // The mail is sent "from" this address (per FFP brief).

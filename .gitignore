@@ -1,0 +1,11 @@
+# Live credentials — keep these on the server only.
+# Copy the .example files and fill them in per environment.
+api/config.php
+api/contact_config.php
+
+# Visitor contact-form submissions (personal data) and throttle state.
+data/contact/
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
