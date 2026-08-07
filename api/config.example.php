@@ -57,6 +57,9 @@ return [
         ['id' => 'mardan',           'name' => 'Mardan',           'province' => 'KP',          'lat' => 34.1989, 'lon' => 72.0231],
         ['id' => 'gujrat',           'name' => 'Gujrat',           'province' => 'Punjab',      'lat' => 32.5731, 'lon' => 74.0789],
         ['id' => 'muzaffarabad',     'name' => 'Muzaffarabad',     'province' => 'AJK',         'lat' => 34.3700, 'lon' => 73.4711],
+        // Jamshoro district industrial corridor (Sindh).
+        ['id' => 'kotri',            'name' => 'Kotri',            'province' => 'Sindh',       'lat' => 25.3654, 'lon' => 68.3080],
+        ['id' => 'nooriabad',        'name' => 'Nooriabad',        'province' => 'Sindh',       'lat' => 25.1447, 'lon' => 67.8503],
     ],
 
     // Pollutants we attempt to ingest. `aqi` flags whether it contributes to
